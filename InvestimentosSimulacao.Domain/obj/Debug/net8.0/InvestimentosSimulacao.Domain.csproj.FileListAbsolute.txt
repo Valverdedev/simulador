@@ -1,0 +1,11 @@
+D:\xpDemo\InvestimentosSimulacao.Domain\bin\Debug\net8.0\InvestimentosSimulacao.Domain.deps.json
+D:\xpDemo\InvestimentosSimulacao.Domain\bin\Debug\net8.0\InvestimentosSimulacao.Domain.dll
+D:\xpDemo\InvestimentosSimulacao.Domain\bin\Debug\net8.0\InvestimentosSimulacao.Domain.pdb
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.AssemblyInfoInputs.cache
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.AssemblyInfo.cs
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.csproj.CoreCompileInputs.cache
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.dll
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\refint\InvestimentosSimulacao.Domain.dll
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.pdb
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\ref\InvestimentosSimulacao.Domain.dll
