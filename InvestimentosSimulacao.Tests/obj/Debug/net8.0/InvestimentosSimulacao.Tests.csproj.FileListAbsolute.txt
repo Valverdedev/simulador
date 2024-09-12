@@ -129,3 +129,4 @@ D:\xpDemo\InvestimentosSimulacao.Tests\obj\Debug\net8.0\refint\InvestimentosSimu
 D:\xpDemo\InvestimentosSimulacao.Tests\obj\Debug\net8.0\InvestimentosSimulacao.Tests.pdb
 D:\xpDemo\InvestimentosSimulacao.Tests\obj\Debug\net8.0\InvestimentosSimulacao.Tests.genruntimeconfig.cache
 D:\xpDemo\InvestimentosSimulacao.Tests\obj\Debug\net8.0\ref\InvestimentosSimulacao.Tests.dll
+D:\xpDemo\InvestimentosSimulacao.Tests\obj\Debug\net8.0\InvestimentosSimulacao.Tests.sourcelink.json

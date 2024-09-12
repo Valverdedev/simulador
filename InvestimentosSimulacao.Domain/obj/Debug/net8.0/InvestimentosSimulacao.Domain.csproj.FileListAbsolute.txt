@@ -9,3 +9,4 @@ D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.
 D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\refint\InvestimentosSimulacao.Domain.dll
 D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.pdb
 D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\ref\InvestimentosSimulacao.Domain.dll
+D:\xpDemo\InvestimentosSimulacao.Domain\obj\Debug\net8.0\InvestimentosSimulacao.Domain.sourcelink.json

@@ -17,3 +17,4 @@ D:\xpDemo\InvestimentosSimulacao.Infrastructure\obj\Debug\net8.0\InvestimentosSi
 D:\xpDemo\InvestimentosSimulacao.Infrastructure\obj\Debug\net8.0\ref\InvestimentosSimulacao.Infrastructure.dll
 D:\xpDemo\InvestimentosSimulacao.Infrastructure\bin\Debug\net8.0\InvestimentosSimulacao.Application.dll
 D:\xpDemo\InvestimentosSimulacao.Infrastructure\bin\Debug\net8.0\InvestimentosSimulacao.Application.pdb
+D:\xpDemo\InvestimentosSimulacao.Infrastructure\obj\Debug\net8.0\InvestimentosSimulacao.Infrastructure.sourcelink.json

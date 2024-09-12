@@ -46,4 +46,5 @@ public class Repositorio<T> : IRepositorio<T> where T : class
     {
         _dbSet.Remove(entity);
     }
+    
 }

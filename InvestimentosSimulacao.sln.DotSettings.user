@@ -1,7 +1,18 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0258366a_002D4ca7_002D42fc_002D80ea_002D6a83eb997f75/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AdicionarAsync_DeveAdicionarAtivoComSucesso" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0258366a_002D4ca7_002D42fc_002D80ea_002D6a83eb997f75/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AdicionarAsync_DeveAdicionarAtivoComSucesso" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveAdicionarAtivoComSucesso&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveChamarRollbackEmCasoDeErro&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveRetornarErroQuandoFalharValidacao&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=35980eba_002D00da_002D4b1a_002D878c_002Ddff2c197c1fd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AdicionarAsync_DeveAdicionarAtivoComSucesso #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveAdicionarAtivoComSucesso&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveRetornarErroQuandoFalharValidacao&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveRetornarSucessoQuandoValidarSucesso&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveRetornarErroQuandoFalharValidacaoComFluentAssertions&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAsync_DeveRetornarErroQuandoFalharValidacaoDedominio&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::585128E9-0618-424B-A364-DB0AB68DB8FA::net8.0::InvestimentosSimulacao.Tests.AtivoServicoTests.AdicionarAtivo_DeveLancarErroQuandoTaxaDeRetornoForNegativa&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

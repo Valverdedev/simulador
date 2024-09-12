@@ -16,12 +16,50 @@ public class AtivoController : ControllerBase
         
     }
     
+    [HttpGet]
+    [Route("ObterPorId/{id}")]
+    public async Task<IActionResult> ObterPorIdAsync(int id)
+    {
+        try
+        {
+            var ativo = await _ativoServico.ObterPorIdAsync(id);
+            return Ok(ativo);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+    
+    [HttpGet]
+    [Route("ObterTodos")]
+    public async Task<IActionResult> ObterTodosAsync()
+    {
+        try
+        {
+            var ativos = await _ativoServico.ObterTodosAsync();
+            return Ok(ativos);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+    
     [HttpPost]
     [Route("Adicionar")]
     public async Task<IActionResult> AdicionarAsync(AtivoInserirDto dto)
     {
-        await _ativoServico.AdicionarAsync(dto);
-        return Ok();
+        try
+        {
+            await _ativoServico.AdicionarAsync(dto);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+            
+        }
     }
     
 }

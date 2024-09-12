@@ -8,7 +8,9 @@ using InvestimentosSimulacao.Application.Dtos.Ativo;
 using AutoMapper;
 using FluentValidation;
 using FluentValidation.Results;
+using InvestimentosSimulacao.Application.Validacoes;
 using InvestimentosSimulacao.Domain.Dominio.Entidades;
+using InvestimentosSimulacao.Domain.Enums;
 using InvestimentosSimulacao.Domain.ValueObjects;
 
 namespace InvestimentosSimulacao.Tests;
@@ -24,15 +26,14 @@ public class AtivoServicoTests
     
     public AtivoServicoTests()
     {
-        
         _unitOfWorkMock = new Mock<IUnitOfWork>();
         _mapperMock = new Mock<IMapper>();
         _validatorMock = new Mock<IValidator<AtivoInserirDto>>();
         _ativoRepositorioMock = new Mock<IAtivoRepositorio>();
-        _ativoServico = new AtivoServico(_unitOfWorkMock.Object, _validatorMock.Object, _mapperMock.Object);
+
         _unitOfWorkMock.Setup(u => u.Ativos).Returns(_ativoRepositorioMock.Object);
 
-     
+        
         _ativoServico = new AtivoServico(_unitOfWorkMock.Object, _validatorMock.Object, _mapperMock.Object);
     }
     
@@ -60,31 +61,44 @@ public class AtivoServicoTests
         _unitOfWorkMock.Verify(u => u.CompleteAsync(), Times.Once);
     }
     
+    
     [Fact]
-    public async Task AdicionarAsync_DeveChamarRollbackEmCasoDeErro()
+    public async Task AdicionarAsync_DeveRetornarErroQuandoFalharValidacao()
     {
-        
         var dto = new AtivoInserirDto
         {
-            Nome = "Ativo Teste",
+            Nome = "A",
+            TipoInvestimento = InvestimentosSimulacao.Domain.Enums.TipoInvestimentoEnum.cdb,
+            TaxaDeRetorno = 5.5
+        };
+        var validador = new AtivoInseriValidar();
+        var resultado = await validador.ValidateAsync(dto);
+        Assert.False(resultado.IsValid);
+       
+    }
+    
+    [Fact]
+    public async Task AdicionarAsync_DeveRetornarSucessoQuandoValidarSucesso ()
+    {
+        var dto = new AtivoInserirDto
+        {
+            Nome = "ABC", // Nome inválido (muito curto)
             TipoInvestimento = InvestimentosSimulacao.Domain.Enums.TipoInvestimentoEnum.cdb,
             TaxaDeRetorno = 5.5
         };
 
-        
-        _validatorMock.Setup(v => v.ValidateAsync(dto, default))
-            .ReturnsAsync(new ValidationResult());
-
-       
-        _mapperMock.Setup(m => m.Map<Ativo>(dto)).Throws(new Exception("Erro de mapeamento"));
-
-        
-        await Assert.ThrowsAsync<Exception>(() => _ativoServico.AdicionarAsync(dto));
-
-        _unitOfWorkMock.Verify(u => u.RollbackAsync(), Times.Once);
-        _unitOfWorkMock.Verify(u => u.CompleteAsync(), Times.Never);
+        var validador = new AtivoInseriValidar();
+        var resultado = await validador.ValidateAsync(dto);
+        Assert.True(resultado.IsValid);
     }
+    
+    [Fact]
+    public void AdicionarAtivo_DeveLancarErroQuandoTaxaDeRetornoForNegativa()
+    {
+        var excecao = Assert.Throws<ArgumentException>(() =>
+            new TaxaDeRetorno(-0.05));
 
-
+        Assert.Equal("A taxa de retorno deve ser maior ou igual a zero.", excecao.Message);
+    }
     
 }

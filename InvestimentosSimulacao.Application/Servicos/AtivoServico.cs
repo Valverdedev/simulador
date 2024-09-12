@@ -21,14 +21,32 @@ public class AtivoServico : IAtivoServico
         _mapper = mapper;
     }
 
-    public Task<AtivoDto> ObterPorIdAsync(int id)
+    public async Task<AtivoDto> ObterPorIdAsync(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var ativo =  await _unitOfWork.Ativos.ObterPorIdAsync(id);
+            return _mapper.Map<AtivoDto>(ativo);
+ 
+        }
+        catch (Exception e)
+        {
+            throw new Exception("Erro ao obter ativo por id", e);
+        }
+        
     }
 
-    public Task<IEnumerable<AtivoDto>> ObterTodosAsync()
+    public async Task<IEnumerable<AtivoDto>> ObterTodosAsync()
     {
-        throw new NotImplementedException();
+        try
+        {
+            var ativos = await _unitOfWork.Ativos.ListarTodosAsync();
+            return _mapper.Map<IEnumerable<AtivoDto>>(ativos);
+        }
+        catch (Exception e)   
+        {
+            throw new Exception("Erro ao obter todos os ativos", e);
+        }
     }
 
     public async Task AdicionarAsync(AtivoInserirDto dto)
@@ -36,19 +54,21 @@ public class AtivoServico : IAtivoServico
         try
         {
             await _validator.ValidateAndThrowAsync(dto);
+
             var ativo = _mapper.Map<Ativo>(dto);
             await _unitOfWork.Ativos.AdicionarAsync(ativo);
-        }
-        catch (Exception e)
-        {
-            await _unitOfWork.RollbackAsync();
-        }
-        finally
-        {
+
             await _unitOfWork.CompleteAsync();
         }
-       
+        catch (ValidationException e)
+        {
+            await _unitOfWork.RollbackAsync();
+            throw;
+        }
+        
     }
+
+
 
     public Task AtualizarAsync(int id, AtivoAtualizarDto dto)
     {
